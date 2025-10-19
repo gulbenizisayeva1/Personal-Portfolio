@@ -1,0 +1,291 @@
+:root{
+  --bg:#111111;         
+  --text:#ffffff;
+  --muted:#b5bbc2;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+a{color:inherit;text-decoration:none}
+
+.header{
+  position:fixed; top:0; left:0; right:0; z-index:10;
+  padding:18px 0;      
+}
+.container{
+  width:min(var(--container),90%);
+  margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{
+  font-size:25px;      
+  color:#fff;         
+  font-weight:700;     
+}
+
+.nav a,
+.brand{
+  position:relative; 
+  padding:6px 0; 
+  color:inherit; 
+  text-decoration:none;
+}
+
+.nav a::before, .nav a::after,
+.brand::before, .brand::after{
+  content:""; 
+  position:absolute; 
+  bottom:-2px; 
+  height:2px;
+  width:0; 
+  background:#009e66;
+  transition:width .35s ease;
+}
+
+.nav a::before, .brand::before { left:0; }
+.nav a::after,  .brand::after  { right:0; }
+
+.nav a:hover::before,
+.nav a:hover::after,
+.nav a:focus-visible::before,
+.nav a:focus-visible::after,
+.brand:hover::before,
+.brand:hover::after,
+.brand:focus-visible::before,
+.brand:focus-visible::after{
+  width:50%;
+}
+.nav{display:flex; gap:22px}
+.nav a{color:#d0d4da; padding:6px 8px; border-radius:10px; font-weight:600;transition: .2s ease;}
+.nav a:hover{opacity: .75;}
+
+.nav a{
+  position:relative; 
+  padding:6px 0; 
+  color:inherit; 
+  text-decoration:none;
+}
+
+.nav a{
+  position:relative; 
+  padding:6px 0; 
+  color:inherit; 
+  text-decoration:none;
+}
+
+.nav a::before,
+.nav a::after{
+  content:""; position:absolute; bottom:-2px; height:2px;
+  width:0; background:#009e66;
+  transition:width .35s ease;
+}
+
+.nav a::before{ left:0; }
+.nav a::after { right:0; }
+
+.nav a:hover::before,
+.nav a:hover::after,
+.nav a:focus-visible::before,
+.nav a:focus-visible::after{ 
+  width:50%; 
+}
+
+.lang{
+  position:fixed; left:65px; top:70%; z-index:9;
+    
+   
+  list-style:none; margin:0; padding:0;
+  display:flex; flex-direction:column; gap:10px;
+}
+.lang a{
+  background:none;             
+  color:#e6e6e6;              
+  font-size:14px;              
+  font-weight:500;
+  display:inline-flex;         
+  flex-direction:column;
+  align-items:center;
+  line-height:1;  
+  transition: opacity .2s ease;
+  
+  
+}
+.lang a:hover{opacity: .75;}
+.lang a span{ display:block }
+
+.lang{
+  display:flex; gap:20px; list-style:none; margin:0; padding:0;
+}
+
+.lang li{
+  position:relative;
+  transform: rotate(-90deg);
+}
+
+.lang a{
+  display:inline-block; 
+  color:#fff; 
+  text-decoration:none;
+  padding:0 8px; 
+  font-weight:500;
+}
+
+// /* ENG üçün sol xətt */
+// .lang li:first-child a::before{
+//   content:""; 
+//   position:absolute; 
+//   left:0; top:0; bottom:0;
+//   width:2px; 
+//   background:#009e66;
+// }
+
+// /* RUS üçün sağ xətt */
+// .lang li:last-child a::after{
+//   content:""; 
+//   position:absolute; 
+//   right:0; top:0; bottom:0;
+//   width:2px; 
+//   background:#009e66;
+// }
+
+
+.social{
+  position:fixed; right:50px; bottom:50px; z-index:9;
+  display:flex; flex-direction:column; gap:12px;
+}
+.social a{
+  width:26px; height:26px; display:grid; place-items:center;
+  color:#ffffff;             
+  background:none;           
+  font-size:18px;
+  transition:opacity .2s ease;
+}
+.social a:hover{ opacity:.75 }
+
+.hero{
+  position:relative; min-height:100vh;
+  display:grid; place-items:center;
+  overflow:hidden;
+}
+
+
+.hero-content{
+  position:relative; z-index:2; text-align:center; padding:0 16px;
+}
+.hero-title{ margin:0 0 12px; font-size:80px ; font-weight:700 }
+.hero-subtitle{ margin:0; font-size:32px; color:var(--muted); font-weight:400; color: #ffffff;}
+
+
+
+.hero-subtitle {
+  font-size: 35px;
+  font-weight: 400;
+  color: #fff;
+}
+
+
+
+/* Sabit kursor xətti (yanıb-sönmür) */
+.cursor {
+  display:inline-block;
+  width:2px;
+  height:1.2em;
+  background:#fff; /* rəngi özün seçə bilərsən */
+  margin-left:4px;
+  vertical-align:bottom;
+}
+
+/* Yazı üçün əsas stil */
+#role {
+  font-weight: 500;   /* istəsən dəyiş */
+  white-space: nowrap;
+}
+
+
+@media (max-width:900px){
+  .lang{ top:auto; bottom:24px; left:12px; flex-direction:row; gap:16px }
+  .social{ right:12px; bottom:20px; flex-direction:row }
+  .hero-photo{ width:100% }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .hero {
+//   position: relative;
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   overflow: hidden;
+// }
+
+// /* şəkil sağ tərəfdə */
+// .hero-photo {
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   width: 40%;          /* sağda nə qədər yer tutsun deyə */
+//   height: 100%;
+//   background: url("./") no-repeat center;
+//   background-size: cover;
+//   filter: grayscale(100%) blur(2px);  /* ağ-qara + blur */
+//   opacity: 0.9;
+//   z-index: 0;
+// }
+
+// /* overlay: həm sol, həm sağ kölgə */
+// .hero::after {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+//   background: linear-gradient(
+//     to right,
+//     rgba(0,0,0,0.9) 0%,     /* solda qara */
+//     rgba(0,0,0,0) 30%,      /* ortada şəffaf */
+//     rgba(0,0,0,0) 70%,      /* ortada şəffaf */
+//     rgba(0,0,0,0.9) 100%    /* sağda qara */
+//   );
+//   z-index: 1;
+//   pointer-events: none;
+// }

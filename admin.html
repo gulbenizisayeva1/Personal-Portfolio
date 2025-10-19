@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="./assets/scss/pages/admin..css">
+</head>
+<body>
+  <div class="admin">
+    <header class="topbar">
+      <h1>Admin Panel</h1>
+      <div class="actions">
+        <button id="btn-import" class="btn">JSON import</button>
+        <button id="btn-export" class="btn btn-primary">data.js export</button>
+        <button id="btn-logout" class="btn btn-dark">Çıxış</button>
+      </div>
+    </header>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="about">About</button>
+      <button class="tab" data-tab="skills">Skills</button>
+      <button class="tab" data-tab="projects">Projects</button>
+      <button class="tab" data-tab="contact">Contact</button>
+    </nav>
+    <section id="panel-about" class="panel active">
+      <form id="form-about" class="form" novalidate>
+        <div class="grid-2">
+          <label>Photo URL <input name="photo" type="text" placeholder="./assets/image/profile.jpg"></label>
+          <label>Alt <input name="alt" type="text" placeholder="Isayeva Gulbeniz" required></label>
+        </div>
+        <div class="grid-2">
+          <label>Eyebrow <input name="eyebrow" type="text" placeholder="Who am I?" required></label>
+          <label>Title <input name="title" type="text" placeholder="I’m ... — Frontend Developer" required></label>
+        </div>
+        <label>Lead
+          <textarea name="lead" rows="4" placeholder="Qısa about mətni..." required></textarea>
+        </label>
+        <label>CV URL <input name="cvUrl" type="url" placeholder="./assets/icons/CV.pdf" required></label>
+
+        <h3>Info elementleri</h3>
+        <div id="about-info-rows" class="rows"></div>
+        <button type="button" class="btn" id="about-info-add">+ element əlavə et</button>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary" id="about-save">Yadda saxla</button>
+        </div>
+      </form>
+    </section>
+    
+    <section id="panel-skills" class="panel">
+      <div class="table-actions">
+        <button id="skill-add" class="btn">+ Skill əlavə et</button>
+      </div>
+      <table class="table" id="skills-table">
+        <thead><tr><th>#</th><th>Ad</th><th>Faiz (0–100)</th><th>Əməliyyat</th></tr></thead>
+        <tbody></tbody>
+      </table>
+       <div class="form-actions">
+          <button type="button" class="btn btn-primary" id="skills-save">Yadda saxla</button>
+        </div>
+    </section>
+
+     <section id="panel-projects" class="panel">
+      <div class="table-actions">
+        <button id="proj-add" class="btn">+ Project əlavə et</button>
+      </div>
+      <table class="table" id="projects-table">
+        <thead><tr><th>#</th><th>Başlıq</th><th>Şəkillər (vergüllə)</th><th>Əməliyyat</th></tr></thead>
+        <tbody></tbody>
+      </table>
+       <div class="form-actions">
+          <button type="button" class="btn btn-primary" id="projects-save">Yadda saxla</button>
+        </div>
+    </section>
+
+    
+    <section id="panel-contact" class="panel">
+      <div class="table-actions">
+        <button id="contact-add" class="btn">+ Sətir əlavə et</button>
+      </div>
+      <table class="table" id="contact-table">
+        <thead><tr><th>#</th><th>Label</th><th>Value</th><th>Href (opsional)</th><th>Əməliyyat</th></tr></thead>
+        <tbody></tbody>
+      </table>
+        <div class="form-actions">
+          <button type="button" id="contact-save" class="btn btn-primary">Yadda saxla</button>
+        </div>
+    </section>
+  </div>
+
+  <script type="module" src="./assets/js/admin.js"></script>
+</body>
+</html>

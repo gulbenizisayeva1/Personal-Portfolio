@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-text="page_title">Portfolio</title>
+  <link rel="stylesheet" href="./assets/scss/pages/index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    
+    <a href="index.html" class="brand" data-text="brand">Portfolio</a>
+  <nav class="nav">
+      <a href="./about.html"    class="transition-link" data-text="nav_about">About</a>
+      <a href="./resume.html"   class="transition-link" data-text="nav_resume">Resume</a>
+      <a href="./projects.html" class="transition-link" data-text="nav_projects">Projects</a>
+      <a href="./contact.html"  class="transition-link" data-text="nav_contact">Contact</a>
+    </nav>
+  </div>
+  <div class="page-transition active from-top" aria-hidden="true"></div>
+</header>
+
+<ul class="lang">
+  <li><a href="#" data-lang="az"><span data-text="lang_az">AZ</span></a></li>
+  <li><a href="#" data-lang="en"><span data-text="lang_en">EN</span></a></li>
+  <li><a href="#" data-lang="ru"><span data-text="lang_ru">RU</span></a></li>
+</ul>
+<div class="social">
+  <a href="https://x.com/" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+  <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+  <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
+<main class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title" data-text="home_title">Gulbeniz Isayeva</h1>
+    <p class="hero-subtitle">
+      <span data-text="home_im">I'm a</span>
+      <span> </span>
+      <span id="role"></span><span class="cursor"></span>
+    </p>
+  </div>
+</main>
+<script type="module" src="./assets/js/lang/translate.js"></script>
+<script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>

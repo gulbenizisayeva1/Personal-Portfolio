@@ -1,0 +1,42 @@
+.contact-hero {
+  padding: 50px 20px;
+  text-align: center;      
+  color: #fff;
+}
+
+.ch-sub {
+  font-size: 16px;
+  color: #b5bbc2;
+  margin-bottom: 12px;     
+}
+
+.ch-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;     
+  color: #ffffff;
+}
+.ch-decor {
+  width: 80px;             
+  height: 3px;
+  background: #00ff99;     
+  margin: 0 auto;          
+  border-radius: 2px;
+}
+
+.ch-decor span,
+.ch-decor i {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ch-title {
+    font-size: 32px;
+  }
+  .ch-sub {
+    font-size: 14px;
+  }
+  .ch-decor {
+    width: 60px;          
+  }
+}
