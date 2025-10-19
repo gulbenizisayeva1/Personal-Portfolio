@@ -16,7 +16,7 @@ It reflects my growth and creativity as a Front-End Developer.
 - Contact form integration with EmailJS  
 
 🚀 Live Demo
-[View Portfolio](https://gulbenizisayeva1.github.io/portfolio/)
+[View Portfolio](https://gulbenizisayeva1.github.io/Personal-Portfolio/)
 
 📝 Note
 This portfolio represents my current skills and growth as a front-end developer.  
